@@ -8,5 +8,82 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), "Avenir Next", sans-serif;
+}
+
+.glow-orb {
+  position: absolute;
+  height: 18rem;
+  width: 18rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.26), transparent 70%);
+  filter: blur(10px);
+  animation: drift 18s ease-in-out infinite;
+}
+
+.glow-orb--soft {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent 70%);
+  animation-duration: 24s;
+}
+
+.float-slow {
+  animation: floatSlow 9s ease-in-out infinite;
+}
+
+.float-fast {
+  animation: floatFast 7s ease-in-out infinite;
+}
+
+.rise-in {
+  animation: riseIn 700ms ease-out both;
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes floatFast {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(16px, -12px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-orb,
+  .float-slow,
+  .float-fast,
+  .rise-in {
+    animation: none;
+  }
 }
