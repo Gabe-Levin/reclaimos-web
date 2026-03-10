@@ -23,7 +23,7 @@ const themes = [
   },
   {
     label: "Light",
-    image: "/images/features/launcher-warm.png",
+    image: "/images/features/launcher-light.png",
     objectPosition: "center 78%",
     bg: "bg-[#FAFAFA]",
     border: "border-[#e0e0e0]",
@@ -40,7 +40,7 @@ const themes = [
   },
   {
     label: "Warm",
-    image: "/images/features/launcher-light.png",
+    image: "/images/features/launcher-warm.png",
     objectPosition: "center 69%",
     bg: "bg-[#E8D8C0]",
     border: "border-[#CDBFA0]",
