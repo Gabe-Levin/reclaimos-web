@@ -6,27 +6,27 @@ import Link from "next/link";
 const items = [
   {
     title: "Local by default",
-    body: "All your settings, usage stats, and focus session history live in private storage on your phone \u2014 explicitly excluded from Android cloud backup and device-to-device transfer. The only data that leaves your device is anonymous usage stats, and only if you opt in.",
+    body: "All your settings, usage stats, and focus session history live in private storage on your phone, explicitly excluded from Android cloud backup and device-to-device transfer. The only data that leaves your device is anonymous usage stats, and only if you opt in.",
   },
   {
     title: "Zero trackers",
-    body: "No analytics SDKs, no ad networks, no crash reporting services. Check the dependencies yourself \u2014 you won\u2019t find Firebase, Mixpanel, or any third-party tracker.",
+    body: "No analytics SDKs, no ad networks, no crash reporting services. Check the dependencies yourself. You won't find Firebase, Mixpanel, or any third-party tracker.",
   },
   {
     title: "Opt-in only",
-    body: "The Collective Impact counter is completely optional. If you opt in, we use a random anonymous ID \u2014 no name, email, or device identifiers ever leave your phone.",
+    body: "The Collective Impact counter is completely optional. If you opt in, we use a random anonymous ID. No name, email, or device identifiers ever leave your phone.",
   },
   {
     title: "You control deletion",
-    body: "One tap in Settings deletes everything \u2014 local data and any remote records. Your contribution to the global counter stays anonymous and aggregate.",
+    body: "One tap in Settings deletes everything, including local data and any remote records. Your contribution to the global counter stays anonymous and aggregate.",
   },
   {
     title: "Minimal permissions",
-    body: "We never request location, camera, microphone, contacts, files, or clipboard access. The accessibility service can\u2019t read your screen content \u2014 it only detects blocked app launches.",
+    body: "We never request location, camera, microphone, contacts, files, or clipboard access. The accessibility service can't read your screen content. It only detects blocked app launches.",
   },
   {
     title: "GDPR & CCPA",
-    body: "Full compliance with European and California privacy law. Right to access, delete, and port your data \u2014 all built into the app, no email required.",
+    body: "Full compliance with European and California privacy law. Right to access, delete, and port your data, all built into the app with no email required.",
   },
 ];
 
