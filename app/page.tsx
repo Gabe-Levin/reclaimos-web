@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Features from "@/components/Features";
+import Privacy from "@/components/Privacy";
 import ReclaimedCounter from "@/components/ReclaimedCounter";
 import Themes from "@/components/Themes";
 
@@ -311,6 +313,9 @@ export default function Home() {
       {/* ── Themes ── */}
       <Themes />
 
+      {/* ── Privacy ── */}
+      <Privacy />
+
       {/* ── Bottom CTA ── */}
       <section className="border-t border-white/10">
         <div className="mx-auto max-w-6xl px-6 py-32 text-center">
@@ -365,7 +370,15 @@ export default function Home() {
           />
           Reclaim OS
         </span>
-        <span className="text-sm text-white/30">reclaimos.com</span>
+        <div className="flex items-center gap-4">
+          <Link
+            href="/privacy"
+            className="text-sm text-white/30 transition-colors hover:text-white/60"
+          >
+            Privacy Policy
+          </Link>
+          <span className="text-sm text-white/30">reclaimos.com</span>
+        </div>
       </footer>
 
     </main>
