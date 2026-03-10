@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import Features from "@/components/Features";
+import ReclaimedCounter from "@/components/ReclaimedCounter";
+import Themes from "@/components/Themes";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -101,7 +104,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-black text-white">
+    <main className="relative min-h-screen overflow-x-clip bg-black text-white">
       <div
         role="status"
         aria-live="polite"
@@ -119,7 +122,16 @@ export default function Home() {
 
       {/* ── Nav ── */}
       <nav className="relative z-10 mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <span className="text-lg font-bold tracking-tight">Reclaim OS</span>
+        <span className="flex items-center gap-4 text-lg font-bold tracking-tight">
+          <Image
+            src="/images/logo.png"
+            alt="Reclaim OS logo"
+            width={56}
+            height={56}
+            className="rounded-full"
+          />
+          Reclaim OS
+        </span>
         <button
           type="button"
           onClick={handleGetAppClick}
@@ -212,8 +224,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Divider ── */}
-      <div className="mx-auto max-w-6xl border-t border-white/10" />
+      {/* ── Reclaimed Counter ── */}
+      <ReclaimedCounter />
 
       {/* ── Stats ── */}
       <section className="relative z-10 mx-auto max-w-6xl px-6 py-20">
@@ -294,67 +306,10 @@ export default function Home() {
       </section>
 
       {/* ── Features ── */}
-      <section className="relative z-10 overflow-hidden border-y border-black/10 bg-[#f4f0ea] text-[#171717]">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(239,68,68,0.12),transparent_35%),radial-gradient(circle_at_90%_80%,rgba(0,0,0,0.08),transparent_30%)]" />
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-red-700">
-            How Reclaim Works
-          </p>
-          <h2 className="max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">
-            Two simple systems that make your phone feel intentional again.
-          </h2>
+      <Features />
 
-          <div className="relative mt-12 space-y-6">
-            <div className="pointer-events-none absolute left-8 top-8 hidden h-[calc(100%-4rem)] w-px bg-gradient-to-b from-red-700/55 to-transparent sm:block" />
-
-            <article className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/80 p-8 shadow-[0_18px_35px_rgba(0,0,0,0.08)] backdrop-blur-sm sm:pl-24">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-red-700/80">
-                Personal Signal
-              </p>
-              <p className="mb-4 text-4xl font-black text-red-700 sm:hidden">01</p>
-              <div className="absolute left-4 top-6 hidden h-12 w-12 items-center justify-center rounded-2xl border border-red-700/25 bg-red-700/10 text-xl font-black text-red-800 sm:flex">
-                01
-              </div>
-              <h3 className="mb-3 text-2xl font-bold">See every minute you take back.</h3>
-              <p className="mb-5 text-lg leading-relaxed text-black/70">
-                Watch distracted time turn into intentional time with one clear
-                reclaimed-hours counter.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="rounded-full border border-black/10 bg-black/[0.03] px-3 py-1 text-xs font-medium text-black/65">
-                  Daily reclaimed-hours counter
-                </span>
-                <span className="rounded-full border border-black/10 bg-black/[0.03] px-3 py-1 text-xs font-medium text-black/65">
-                  Progress over shame
-                </span>
-              </div>
-            </article>
-
-            <article className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/80 p-8 shadow-[0_18px_35px_rgba(0,0,0,0.08)] backdrop-blur-sm sm:pl-24">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-red-700/80">
-                Collective Signal
-              </p>
-              <p className="mb-4 text-4xl font-black text-red-700 sm:hidden">02</p>
-              <div className="absolute left-4 top-6 hidden h-12 w-12 items-center justify-center rounded-2xl border border-red-700/25 bg-red-700/10 text-xl font-black text-red-800 sm:flex">
-                02
-              </div>
-              <h3 className="mb-3 text-2xl font-bold">You&apos;re not fighting alone.</h3>
-              <p className="mb-5 text-lg leading-relaxed text-black/70">
-                Your progress adds to a shared total, proving people want calmer
-                and more intentional phone habits.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="rounded-full border border-black/10 bg-black/[0.03] px-3 py-1 text-xs font-medium text-black/65">
-                  Shared global counter
-                </span>
-                <span className="rounded-full border border-black/10 bg-black/[0.03] px-3 py-1 text-xs font-medium text-black/65">
-                  Community accountability
-                </span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+      {/* ── Themes ── */}
+      <Themes />
 
       {/* ── Bottom CTA ── */}
       <section className="border-t border-white/10">
@@ -400,7 +355,16 @@ export default function Home() {
 
       {/* ── Footer ── */}
       <footer className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-white/10 px-6 py-8 sm:flex-row">
-        <span className="text-sm font-bold tracking-tight">Reclaim OS</span>
+        <span className="flex items-center gap-2 text-sm font-bold tracking-tight">
+          <Image
+            src="/images/logo.png"
+            alt="Reclaim OS logo"
+            width={20}
+            height={20}
+            className="rounded-full"
+          />
+          Reclaim OS
+        </span>
         <span className="text-sm text-white/30">reclaimos.com</span>
       </footer>
 
